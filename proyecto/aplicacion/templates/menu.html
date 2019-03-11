@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+<div class="container">
+    
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <h1 class="text-light">Bienvenido {{user.username}}</h1>
+      <a class="btn btn-light ml-auto mr-5" href="{% url 'logout' %}">Salir</a>
+    </nav>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card text-black bg-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">
+                    <a class="btn btn-success btn-lg btn-block" href="">
+                        <h4>Español</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="card text-black bg-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">
+                    <a class="btn btn-success btn-lg btn-block" href="">
+                        <h4>Matematicas</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-black bg-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">
+                    <a class="btn btn-success btn-lg btn-block" href="">
+                        <h4>Ciencias naturales</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="card text-black bg-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">
+                    <a class="btn btn-success btn-lg btn-block" href="">
+                        <h4>Historia</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-4">
+            <div class="card text-black bg-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">
+                    <a class="btn btn-success btn-lg btn-block" href="">
+                        <h4>Civismo</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card text-black bg-secondary mb-3" style="max-width: 20rem;">
+                <div class="card-header">
+                    <a class="btn btn-success btn-lg btn-block" href="">
+                        <h4>Geografía</h4>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                        the card's content.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock contenido %}

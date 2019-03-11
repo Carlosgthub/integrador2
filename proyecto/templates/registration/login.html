@@ -1,0 +1,29 @@
+<!-- {% extends '../base.html' %} -->
+
+{% block titulo %}
+login
+{% endblock titulo %}
+
+
+{% block contenido %}
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+        <form class="form-signin" method="post">
+            {% csrf_token %}
+            <h1 style="font-size: 10em;"><i class="far fa-smile"></i></h1>
+            <h1 class="h3 mb-3 font-weight-normal">Por favor ingrese</h1>
+            <input name="{{ form.username.html_name }}" type="text" id="inputEmail" class="form-control" placeholder="Usuario" required autofocus>
+            <input name="{{ form.password.html_name }}" type="password" id="inputPassword" class="form-control mt-2" placeholder="Contraseña" required>
+            <div class="checkbox mb-3 mt-2">
+                <label>
+                    <input type="checkbox" value="remember-me"> Recuerdame
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+        </form>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+{% endblock contenido %}
