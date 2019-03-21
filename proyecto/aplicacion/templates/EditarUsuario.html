@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit" class="btn btn-success btn-block">Editar</button>
+            <a class="btn btn-primary btn-block mt-4" href="{% url 'index' %}">Regresarse</a>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+{% endblock contenido %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+    <h1>Informacion</h1>
+
+    <h3>Usuario:</h3>
+    <p>{{object.username}}</p>
+
+    <h3>Nombres(s):</h3>
+    <p>{{object.first_name}}</p>
+
+    <h3>Apellidos:</h3>
+    <p>{{object.last_name}}</p>
+
+    <h3>Se registro en:</h3>
+    <p>{{object.date_joined.date}}</p>
+    
+    <a class="btn btn-secondary" href="{% url 'menu' %}">Regresar</a>
+
+
+{% endblock contenido %}

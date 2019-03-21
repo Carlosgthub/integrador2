@@ -1,8 +1,9 @@
 from django.shortcuts import render, HttpResponseRedirect
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
+from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
-from .forms import CreateUserForm
+from .forms import CrearUsuarioForm, EditarUsuarioForm
 
 # Create your views here.
 def index(request):
@@ -18,10 +19,20 @@ class RegistroUsuario(CreateView):
     success_url = reverse_lazy('registroConExito')
     template_name = 'RegistroUsuario.html'
     model = User
-    form_class = CreateUserForm
+    form_class = CrearUsuarioForm
 
     def form_valid(self,form):
         self.object = form.save(commit=False)
         self.object.set_password(self.object.password)
         self.object.save()
         return HttpResponseRedirect(self.get_success_url())
+
+class InformacionUsuario(generic.DetailView):
+    model = User
+    template_name = "informacionUsuario.html"
+
+class EditarUsuario(UpdateView):
+    success_url = reverse_lazy('menu')
+    template_name = 'EditarUsuario.html'
+    model = User
+    form_class = EditarUsuarioForm
