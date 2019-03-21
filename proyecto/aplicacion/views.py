@@ -16,8 +16,28 @@ def registroExito(request):
     return render(request, 'registroConExito.html', {})
 
 
+# Views de juegos
+
 def JuegosMatematicas(request):
     return render(request, 'math.html', {})
+
+def JuegosEspanol(request):
+    return render(request, 'espanol.html', {})
+
+def JuegosCiencias(request):
+    return render(request, 'ciencias.html', {})
+
+
+def JuegosHistoria(request):
+    return render(request, 'historia.html', {})
+
+
+def JuegosCivismo(request):
+    return render(request, 'civismo.html', {})
+
+
+def JuegosGeografia(request):
+    return render(request, 'geografia.html', {})
 
 
 class RegistroUsuario(CreateView):
