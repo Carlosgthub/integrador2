@@ -8,6 +8,7 @@
       <h1 class="text-light">Bienvenido {{user.get_full_name}}</h1>
       <a class="btn btn-light ml-auto mr-5" href="{% url 'InformacionUsuario' user.id %}">Informacion del usuario</a>
       <a class="btn btn-light ml-auto mr-5" href="{% url 'EditarUsuario' user.id %}">Modificar datos</a>
+      <a class="btn btn-light ml-auto mr-5" href="{% url 'EliminarUsuario' user.id %}">Darse de baja</a>
       <a class="btn btn-light ml-auto mr-5" href="{% url 'logout' %}">Salir</a>
     </nav>
 

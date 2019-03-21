@@ -1,5 +1,5 @@
-from django.shortcuts import render, HttpResponseRedirect
-from django.views.generic.edit import CreateView, UpdateView
+from django.shortcuts import render, HttpResponseRedirect, redirect
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views import generic
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
@@ -36,3 +36,17 @@ class EditarUsuario(UpdateView):
     template_name = 'EditarUsuario.html'
     model = User
     form_class = EditarUsuarioForm
+
+# class EliminarUsuario(DeleteView):
+#     success_url = reverse_lazy('index')
+#     template_name = 'EliminarUsuario.html'
+#     model = User
+
+def EliminarUsuario(request, pk):
+  try:
+    user = User.objects.get(id=pk)
+    user.is_active = False
+    user.save()
+  except Exception as e:
+     raise Http404
+  return redirect('index')
