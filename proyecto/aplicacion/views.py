@@ -15,6 +15,11 @@ def menu(request):
 def registroExito(request):
     return render(request, 'registroConExito.html', {})
 
+
+def JuegosMatematicas(request):
+    return render(request, 'math.html', {})
+
+
 class RegistroUsuario(CreateView):
     success_url = reverse_lazy('registroConExito')
     template_name = 'RegistroUsuario.html'
