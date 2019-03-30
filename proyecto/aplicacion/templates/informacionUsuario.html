@@ -18,5 +18,7 @@
     
     <a class="btn btn-secondary" href="{% url 'menu' %}">Regresar</a>
 
+    <a class="btn btn-info" href="{% url 'EditarUsuario' user.id %}">Editar perfil</a>
+    <a class="btn btn-danger" href="{% url 'EliminarUsuario' user.id %}">Darse de baja</a>
 
 {% endblock contenido %}

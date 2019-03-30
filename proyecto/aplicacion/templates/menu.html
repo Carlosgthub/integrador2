@@ -4,12 +4,26 @@
 
 <div class="container">
     
-    <nav class="navbar navbar-expand navbar-dark bg-dark">
-      <h1 class="text-light">Bienvenido {{user.get_full_name}}</h1>
-      <a class="btn btn-light ml-auto mr-5" href="{% url 'InformacionUsuario' user.id %}">Informacion del usuario</a>
-      <a class="btn btn-light ml-auto mr-5" href="{% url 'EditarUsuario' user.id %}">Modificar datos</a>
-      <a class="btn btn-light ml-auto mr-5" href="{% url 'EliminarUsuario' user.id %}">Darse de baja</a>
-      <a class="btn btn-light ml-auto mr-5" href="{% url 'logout' %}">Salir</a>
+    <!-- <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgb(40, 167, 69);"> -->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: dimgray;">
+        <a class="navbar-brand" href="#">{{user.get_full_name}}</a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="{% url 'InformacionUsuario' user.id %}">Ver perfil</a>
+                        <a class="dropdown-item" href="{% url 'logout' %}">Salir</a>
+                    </div>
+                </li>
+            <!-- </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+        </div>
     </nav>
 
     <div class="row mt-5">
