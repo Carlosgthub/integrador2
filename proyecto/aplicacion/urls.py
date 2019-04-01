@@ -10,6 +10,8 @@ urlpatterns = [
     path('EditarUsuario/<int:pk>', views.EditarUsuario.as_view(), name="EditarUsuario"),
     path('BajaUsuario/<int:pk>', views.EliminarUsuario, name="EliminarUsuario"),
 
+    path('prueba/', views.dashboard, name='dashbaord'),
+
     #Urls de juegos
     path('menu/JuegosMatematicas/', views.JuegosMatematicas, name='JuegosMatematicas'),
     path('menu/JuegosEspanol/', views.JuegosEspanol, name='JuegosEspanol'),
