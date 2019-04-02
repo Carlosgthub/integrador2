@@ -17,7 +17,7 @@ var tinyx=new Array();
 var tinyy=new Array();
 var tinyv=new Array();
 
-colours=new Array('#ff0000','#00ff00','#ffffff','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff')
+colours=new Array('#D61C59','#E7D84B','#1B8798','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff')
 
 n = 10;
 y = 0;
@@ -32,7 +32,7 @@ s=(ns)?'':'.style';
 
 if (ns){
 	for (i = 0; i < n; i++)
-		document.write('<layer name="dots'*i*'" top=0 left=0 width='*i/2*' height='*i/2*' bgcolor=#E7D84B></layer>');
+		document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#ff0000></layer>');
 }
 
 if (ie)
@@ -40,7 +40,9 @@ if (ie)
 
 if (ie||n6){
 	for (i = 0; i < n; i++)
-		document.write('<div id="dots'*i*'" style="position:absolute;top:0px;left:0px;width:'*i/2*'px;height:'*i/2*'px;background:#ff0000;font-size:'*i/2*'"></div>');
+		document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+30+'"></div>');
+
+		// document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+i/2+'"></div>');
 }
 
 if (ie)
@@ -98,7 +100,7 @@ window.onload=function() { if (document.getElementById) {
 		starv[i]=0;
 		tinyv[i]=0;
 		var rats=createDiv(5, 5);
-		rats.style.backgroundColor="D61C59";
+		rats.style.backgroundColor="transparent";
 		rats.style.visibility="hidden";
 		rats.style.zIndex="999";
 		var rlef=createDiv(1, 5);
