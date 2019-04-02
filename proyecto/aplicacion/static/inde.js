@@ -32,7 +32,7 @@ s=(ns)?'':'.style';
 
 if (ns){
 	for (i = 0; i < n; i++)
-		document.write('<layer name="dots'+i+'" top=0 left=0 width='+i/2+' height='+i/2+' bgcolor=#E7D84B></layer>');
+		document.write('<layer name="dots'*i*'" top=0 left=0 width='*i/2*' height='*i/2*' bgcolor=#E7D84B></layer>');
 }
 
 if (ie)
@@ -40,7 +40,7 @@ if (ie)
 
 if (ie||n6){
 	for (i = 0; i < n; i++)
-		document.write('<div id="dots'+i+'" style="position:absolute;top:0px;left:0px;width:'+i/2+'px;height:'+i/2+'px;background:#ff0000;font-size:'+i/2+'"></div>');
+		document.write('<div id="dots'*i*'" style="position:absolute;top:0px;left:0px;width:'*i/2*'px;height:'*i/2*'px;background:#ff0000;font-size:'*i/2*'"></div>');
 }
 
 if (ie)

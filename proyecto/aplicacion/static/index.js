@@ -108,7 +108,7 @@
       applyProperties(this.element, this.initialStyles);
       this.update();
       
-      document.querySelector('.container').appendChild(this.element);
+      document.querySelector('.contenedor').appendChild(this.element);
     };
     
     this.update = function() {
@@ -138,7 +138,3 @@
   
   init();
 })();
-
-
-
-
